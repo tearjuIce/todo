@@ -1,15 +1,23 @@
 -- init.sql
 
 -- Create a table for users
-CREATE TABLE IF NOT EXISTS tasks (
+CREATE TABLE IF NOT EXISTS users (
     id integer primary key generated always as identity,
-    name text,
-    is_completed boolean default false
+    username text,
+    email text,
+    password text
+);
+
+CREATE TABLE IF NOT EXISTS roles (
+    id integer primary key generated always as identity,
+    name text
 );
 
 -- Insert some initial data into the users table
-INSERT INTO tasks (name, is_completed) VALUES
-    ('apply job', 'false');
+INSERT INTO roles (name) VALUES 
+    ('user'),
+    ('admin'),
+    ('mod');
 
 -- Create a table for products
 -- CREATE TABLE IF NOT EXISTS products (

@@ -1,9 +1,9 @@
 // server.js
 import express from "express";
 import cors from "cors";
-import db from "./app/models/index.js";
-import authRoutes from "./app/routes/auth.routes.js";
-import userRoutes from "./app/routes/user.routes.js";
+import db from "./models/index.js";
+import authRoutes from "./routes/auth.routes.js";
+import userRoutes from "./routes/user.routes.js";
  
 const app = express();
  
